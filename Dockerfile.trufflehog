@@ -3,9 +3,9 @@ RUN apk add --no-cache bash git wget openssh-client ca-certificates \
     && rm -rf /var/cache/apk/* && \
     update-ca-certificates
 RUN if [ $(uname -m) = "x86_64" ]; then \
-        wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.6/trufflehog_3.88.6_linux_amd64.tar.gz -O /tmp/trufflehog.tar.gz \
+        wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.90.5/trufflehog_3.90.5_linux_amd64.tar.gz -O /tmp/trufflehog.tar.gz \
     ; elif [ $(uname -m) = "aarch64" ]; then \
-        wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.88.6/trufflehog_3.88.6_linux_arm64.tar.gz -O /tmp/trufflehog.tar.gz \
+        wget https://github.com/trufflesecurity/trufflehog/releases/download/v3.90.5/trufflehog_3.90.5_linux_arm64.tar.gz -O /tmp/trufflehog.tar.gz \
     ; else \
         echo "Unsupported architecture" && exit 1 \
     ; fi \
